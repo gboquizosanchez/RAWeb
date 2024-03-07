@@ -136,11 +136,11 @@ $menuSystemsList = [
         <x-fas-trophy/>
         <span class="ml-1 hidden sm:inline-block">{{ __res('achievement') }}</span>
     </x-slot>
-    <x-dropdown-item :link="url('achievementList.php')">All Achievements</x-dropdown-item>
+    <x-dropdown-item :link="url('achievements')">All Achievements</x-dropdown-item>
     <div class="dropdown-divider"></div>
     {{--<x-dropdown-item :link="awardedList.php">Commonly Won Achievements</x-dropdown-item>--}}
-    <x-dropdown-item :link="url('achievementList.php?s=4&p=2')">Easy Achievements</x-dropdown-item>
-    <x-dropdown-item :link="url('achievementList.php?s=14&p=2')">Hardest Achievements</x-dropdown-item>
+    <x-dropdown-item :link="url('achievements?s=4&p=2')">Easy Achievements</x-dropdown-item>
+    <x-dropdown-item :link="url('achievements?s=14&p=2')">Hardest Achievements</x-dropdown-item>
 </x-nav-dropdown>
 <x-nav-dropdown :title="__('Community')">
     <x-slot name="trigger">

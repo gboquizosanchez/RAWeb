@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Platform;
 
 use App\Models\GameHash;
+use App\Platform\Controllers\AchievementController;
 use App\Platform\Controllers\BeatenGamesLeaderboardController;
 use App\Platform\Controllers\DeveloperFeedController;
 use App\Platform\Controllers\DeveloperSetsController;
@@ -45,7 +46,8 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::middleware(['web', 'csp'])->group(function () {
             // Route::get('achievement/{achievement}{slug?}', [AchievementController::class, 'show'])->name('achievement.show');
-            // Route::resource('achievements', AchievementController::class)->only('index')->names(['index' => 'achievement.index']);
+            Route::get('achievements', [AchievementController::class, 'achievements'])
+                 ->name('achievement.index');
             // Route::get(
             //     'achievement/{achievement}/players',
             //     [AchievementPlayerController::class, 'index']
